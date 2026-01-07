@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+
+  /* 🔹 Background image */
+      background-image: url("background4.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+}
+
+p {
+  font-size: 60px;
+  margin-top: 50px;
+}
+
+#nextBtn {
+  display: none;
+  margin-top: 30px;
+  padding: 15px 30px;
+  font-size: 20px;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<p id="demo"></p>
+
+<button id="nextBtn" onclick="goNext()">Let's Start</button>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 7, 2026 00:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function () {
+
+  var now = new Date().getTime();
+  var distance = countDownDate - now;
+
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("demo").innerHTML =
+    days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+
+  // When countdown finishes
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Time's Up 🎉";
+    document.getElementById("nextBtn").style.display = "inline-block";
+  }
+
+}, 1000);
+
+// Button action
+function goNext() {
+  window.location.href = "index1.html";
+}
+</script>
+
+</body>
+</html>

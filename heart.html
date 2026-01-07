@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {
+  height: 2000px;
+  background: #f1f1f1;
+  align-items: center; 
+}
+
+#mySVG {
+  position: fixed;
+  top: 15%;
+  width: 400px;
+  height: 300px;
+  margin-left: -50px;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Scroll down to draw a heart ❤️</h2>
+<p>Scroll up to reverse the drawing.</p>
+
+<svg id="mySVG" viewBox="0 0 300 300">
+  <path
+    id="heart"
+    fill="none"
+    stroke="red"
+    stroke-width="4"
+    d="
+      M150 260
+      C 20 160, 40 20, 150 90
+      C 260 20, 280 160, 150 260
+
+    "
+  />
+  Sorry, your browser does not support inline SVG.
+</svg>
+
+<script>
+// Get heart path
+var heart = document.getElementById("heart");
+var length = heart.getTotalLength();
+
+// Prepare path for drawing
+heart.style.strokeDasharray = length;
+heart.style.strokeDashoffset = length;
+
+// Scroll event
+window.addEventListener("scroll", drawHeart);
+
+function drawHeart() {
+  var scrollPercent =
+    (document.documentElement.scrollTop || document.body.scrollTop) /
+    (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+
+  var draw = length * scrollPercent;
+  heart.style.strokeDashoffset = length - draw;
+}
+</script>
+
+</body>
+</html>

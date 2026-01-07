@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+   /* 🔹 Background image */
+      background-image: url("background3.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  gap: 30px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+</style>
+</head>
+<body>
+
+<h1>Best Memories</h1>
+<div class="cards-container">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="img1.jpg" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Fav Dress</h1> 
+      <p>YOU and Me</p> 
+      <p>Both look Nice</p>
+    </div>
+  </div>
+</div>
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="img2.jpg" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>My favorites in Single Pic</h1> 
+      <p>In love with this foto.</p> 
+      <p>I Love You</p>
+    </div>
+  </div>
+</div>
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="img3.jpg" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>One remeberable Pic</h1> 
+      <p>Happy Us!!</p> 
+      </div>
+  </div>
+</div>
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="img4.jpeg" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>First Pic in CBE Park</h1> 
+      <p>Holded up hand for a min.</p> 
+      
+    </div>
+  </div>
+</div>
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="img5.jpeg" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Best time during our jobless time </h1> 
+      <p>Spent more time with you.</p> 
+      
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="img6.jpeg" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>First Pic in CBE</h1> 
+      <p>In Mall</p> 
+      
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="img7.jpeg" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Meet in HCL</h1> 
+      <p>You came for interview.</p> 
+      
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="img8.jpeg" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Love Love Love Love</h1> 
+      <p>MEOW YOU</p> 
+      
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="img9.jpeg" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Adevntures Trip</h1> 
+      <p>We had best foto during the car travel.</p> 
+      
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="img10.jpeg" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Our pose in park</h1> 
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="img11.jpeg" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Our first Bus Ride</h1> 
+      <p>Your frst day to HCL.</p> 
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="img12.jpeg" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>My BD Dating</h1>
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="img13.jpeg" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Ghibli Art</h1> 
+      <p>We three.</p> 
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="img14.jpeg" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Best Day</h1> 
+      <p>Had awesome experience in Rain</p> 
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="img15.jpeg" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>you gave a flower for me</h1> 
+      <p>Thank you</p> 
+      <p>It also macthes my dress color.</p>
+    </div>
+  </div>
+</div>
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="img16.jpeg" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>First day @ Park</h1> 
+      <p>In love with sea saw</p> 
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="img17.jpeg" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Mirror Selfie</h1> 
+      <p>we were holding hands behind us .</p> 
+    </div>
+  </div>
+</div>
+</div>
+
+</body>
+</html>

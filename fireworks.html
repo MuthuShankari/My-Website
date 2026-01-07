@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fireworks</title>
+<style>
+body {
+  margin: 0;
+  background: black;
+  color: white;
+  text-align: center;
+}
+canvas {
+  display: block;
+}
+a {
+  color: white;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
+</style>
+</head>
+
+<body>
+<a href="cele.html">⬅ Next</a>
+<canvas id="c"></canvas>
+
+<script>
+const c = document.getElementById("c");
+const ctx = c.getContext("2d");
+c.width = innerWidth;
+c.height = innerHeight;
+
+let particles = [];
+
+for (let i = 0; i < 150; i++) {
+  particles.push({
+    x: c.width / 2,
+    y: c.height / 2,
+    vx: (Math.random() - 0.5) * 8,
+    vy: (Math.random() - 0.5) * 8,
+    life: 100
+  });
+}
+
+function animate() {
+  ctx.clearRect(0,0,c.width,c.height);
+  particles.forEach(p => {
+    p.x += p.vx;
+    p.y += p.vy;
+    p.life--;
+    ctx.fillStyle = `hsl(${Math.random()*360},100%,60%)`;
+    ctx.beginPath();
+    ctx.arc(p.x,p.y,3,0,Math.PI*2);
+    ctx.fill();
+  });
+  particles = particles.filter(p => p.life > 0);
+  requestAnimationFrame(animate);
+}
+animate();
+</script>
+</body>
+</html>

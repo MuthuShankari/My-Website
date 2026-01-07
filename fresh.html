@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple 4 Buttons</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      font-family: Arial;
+
+      /* 🔹 Background image */
+      background-image: url("background1.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      /* 🔹 Center content */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; 
+    }
+
+    button {
+      padding: 14px 30px;
+      margin: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.85);
+    }
+
+    button:hover {
+      background: white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Choose an Option</h2>
+
+  <button onclick="location.href='memories.html'">Memories</button><br>
+  <button onclick="location.href='games.html'">Game</button><br>
+  <button onclick="location.href='letter.html'">Letter</button><br>
+  <button onclick="location.href='fireworks.html'">Celebration</button>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday 🎂</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="birthday-container">
+  <!-- Cake -->
+  <svg class="cake" viewBox="0 0 200 200">
+    <!-- Cake base -->
+    <rect x="40" y="110" width="120" height="50" rx="10" fill="brown"/>
+
+    <!-- Candles -->
+    <rect  x="70" y="70" width="10" height="40" fill="blue"/>
+    <rect  x="95" y="70" width="10" height="40" fill="red"/>
+    <rect  x="120" y="70" width="10" height="40" fill="green"/>
+
+    <!-- Flames -->
+    <circle class="flame" cx="75" cy="65" r="6"/>
+    <circle class="flame" cx="100" cy="65" r="6"/>
+    <circle class="flame" cx="125" cy="65" r="6"/>
+  </svg>
+
+  <h1>🎉 Happy Birthday Meow🎉</h1>
+
+  <!-- Buttons -->
+  <div class="controls">
+    <button id="lightBtn">🔥 Light the Candles</button>
+    <button id="blowBtn" disabled>💨 Blow the Candles</button>
+  </div>
+</div>
+
+<!-- Popup -->
+<div class="popup" id="popup">
+  <div class="popup-box">
+    <h2>✨ Make a Wish ✨</h2>
+    <p>Close your eyes and make the sweetest wish 💖</p>
+    <button id="closePopup">🎁 Done</button>
+  </div>
+</div>
+
+<script src="scripts.js"></script>
+</body>
+</html>
